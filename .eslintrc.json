@@ -1,3 +1,4 @@
 {
+  "plugins": ["testing-library", "jest-dom"],
   "extends": "next/core-web-vitals"
 }

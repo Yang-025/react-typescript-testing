@@ -4,16 +4,9 @@
 // };
 // module.exports = nextConfig;
 
-const withMDX = require("@next/mdx")({
-  extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: [],
+const withMDX = require("@next/mdx")();
+module.exports = withMDX({
+  serverRuntimeConfig: {
+    PROJECT_ROOT: __dirname,
   },
 });
-module.exports = withMDX({
-  // reactStrictMode: true,
-  pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
-});
-
-
